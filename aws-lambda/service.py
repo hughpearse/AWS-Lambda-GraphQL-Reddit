@@ -56,7 +56,6 @@ def graphql_server():
     return jsonify(result), status_code
 
 def handler(event, context):
-    #data = json.dumps(event)
     with app.app_context():
       data = event
       success, result = graphql_sync(
