@@ -8,18 +8,4 @@ And converts the response to a GraphQL defintion. The original Reddit API is wra
 
 1. The code first approach
 2. The schema first approach
-
-You can then upload to AWS Lambda (cloud functions)
-
-https://eu-west-1.console.aws.amazon.com/lambda/
-
-with the settings:
-
-```text
-name: myRedditGraphQLWrapper
-environment: python v3.7
-```
-
-And create an associated REST gateway configuration
-
-https://console.aws.amazon.com/apigateway/
+3. The serverless cloud functions approach
