@@ -58,4 +58,17 @@ You can then test your new API on a hosted Grapql Playground tool like
 
 https://lucasconstantino.github.io/graphiql-online/
 
-
+```javascript
+query{
+  posts (subreddit:"maliciouscompliance"){
+    id
+    title
+    url
+    url_overridden_by_dest
+    ups
+    downs
+    author
+    selftext
+  }
+}
+```
