@@ -37,6 +37,10 @@ environment: python v3.7
 Handler: service.handler
 ```
 
+Add a policy to the cloud function role
+
+https://console.aws.amazon.com/iam
+
 And create an associated REST gateway configuration
 
 https://console.aws.amazon.com/apigateway/
