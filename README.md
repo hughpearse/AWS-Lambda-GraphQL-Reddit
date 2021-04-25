@@ -4,7 +4,7 @@ The following code downloads data from Reddit as:
 
 https://www.reddit.com/r/MaliciousCompliance.json
 
-And convers the response to a GraphQL API.
+And converts the response to a GraphQL defintion. The original Reddit API is wrapped in a new API using Flask. This is done using flask-graphql
 
 To run it execute: 
 
