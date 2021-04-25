@@ -19,7 +19,12 @@ foo@bar$ export FLASK_APP=service.py
 foo@bar$ flask run
 ```
 
-build the archive
+And access the UI at
+
+http://127.0.0.1:5000/graphql
+
+
+Next you can build the archive
 
 ```bash
 foo@bar$ lambda build

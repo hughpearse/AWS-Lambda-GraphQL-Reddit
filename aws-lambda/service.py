@@ -44,7 +44,6 @@ def graphql_playground():
 @app.route("/graphql", methods=["POST"])
 def graphql_server():
     data = request.get_json()
-    print("flask data: " + json.dumps(data))
     success, result = graphql_sync(
         schema,
         data,
