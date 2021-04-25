@@ -4,32 +4,30 @@ The following code downloads data from Reddit as:
 
 https://www.reddit.com/r/MaliciousCompliance.json
 
-And converts the response to a GraphQL defintion. The original Reddit API is wrapped in a new API using Flask. This is done using flask-graphql
+And converts the response to a GraphQL defintion. The original Reddit API is wrapped in a new API using Flask. This is done using 2 different approaches:
 
-To run it execute: 
+1. The code first approach
+2. The schema first approach
 
-```bash
-foo@bar$ pipenv --rm
-foo@bar$ pipenv install --three
-foo@bar$ export FLASK_APP=server.py
-foo@bar$ pipenv run flask run
 ```
-Then open
 
-http://127.0.0.1:5000/graphql
+You can then upload to AWS. First compress to an archive
 
-You can then run the following graphql query
-```javascript
-query{
-  posts (subreddit:"maliciouscompliance"){
-    id
-    title
-    url
-    url_overridden_by_dest
-    ups
-    downs
-    author
-    selftext
-  }
-}
 ```
+foo@bar$ zip -r files.zip ./app.py ./.venv/*
+```
+
+Then upload to AWS Lambda (cloud functions)
+
+https://eu-west-1.console.aws.amazon.com/lambda/
+
+with the settings:
+
+```text
+name: myRedditGraphQLWrapper
+environment: python v3.7
+```
+
+And create an associated REST gateway configuration
+
+https://console.aws.amazon.com/apigateway/

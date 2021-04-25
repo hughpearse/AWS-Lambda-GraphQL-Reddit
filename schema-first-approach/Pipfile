@@ -4,10 +4,9 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [packages]
-flask = "*"
-flask-graphql = "2.0.1"
 requests = "2.25.1"
-graphene = "2.1.8"
+ariadne = "0.13.0"
+uvicorn = "0.13.4"
 
 [requires]
 python_version = "3.7"
