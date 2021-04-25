@@ -24,3 +24,19 @@ build the archive
 ```bash
 foo@bar$ lambda build
 ```
+
+You can then upload the resulting zip archive (in dist/) to AWS Lambda (cloud functions)
+
+https://eu-west-1.console.aws.amazon.com/lambda/
+
+with the settings:
+
+```text
+name: myRedditGraphQLWrapper
+environment: python v3.7
+Handler: service.handler
+```
+
+And create an associated REST gateway configuration
+
+https://console.aws.amazon.com/apigateway/
