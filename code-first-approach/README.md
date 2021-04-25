@@ -13,7 +13,7 @@ foo@bar$ pipenv --rm
 foo@bar$ pipenv install --three
 foo@bar$ pipenv shell
 foo@bar$ export FLASK_APP=app.py
-foo@bar$ pipenv run flask run
+foo@bar$ flask run
 ```
 Then open
 
