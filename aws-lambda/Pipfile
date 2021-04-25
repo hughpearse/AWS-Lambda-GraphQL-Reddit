@@ -1,0 +1,15 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+awscli = "1.19.57"
+python-lambda = "11.8.0"
+
+[requires]
+python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
+
