@@ -42,10 +42,20 @@ environment: python v3.7
 Handler: service.handler
 ```
 
-Add a policy to the cloud function role
-
-https://console.aws.amazon.com/iam
-
 And create an associated REST gateway configuration
 
 https://console.aws.amazon.com/apigateway/
+
+```text
+Actions -> Create Method -> POST
+Actions -> Enable CORS
+Actions -> Deploy API
+```
+
+Take a note of the gateway endpoint. 
+
+You can then test your new API on a hosted Grapql Playground tool like
+
+https://lucasconstantino.github.io/graphiql-online/
+
+
