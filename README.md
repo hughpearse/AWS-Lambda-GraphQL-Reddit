@@ -25,6 +25,7 @@ query{
     id
     title
     url
+    url_overridden_by_dest
     ups
     downs
     author

@@ -11,6 +11,7 @@ class Post(ObjectType):
     id = ID()
     title = String()
     url = String()
+    url_overridden_by_dest = String()
     author = String ()
     ups = Int()
     downs = Int()
