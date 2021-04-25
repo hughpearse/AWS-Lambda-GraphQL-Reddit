@@ -10,6 +10,7 @@ You can test the lambda code:
 ```bash
 foo@bar$ lambda init # dev purposes only
 foo@bar$ lambda invoke
+```
 
 Or you can run the web server
 
