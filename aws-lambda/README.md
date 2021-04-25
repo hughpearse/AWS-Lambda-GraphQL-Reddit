@@ -14,9 +14,13 @@ foo@bar$ lambda invoke
 
 Or you can run the web server
 
-```
+```bash
 foo@bar$ export FLASK_APP=service.py
 foo@bar$ flask run
 ```
 
+build the archive
 
+```bash
+foo@bar$ lambda build
+```

@@ -9,13 +9,7 @@ And converts the response to a GraphQL defintion. The original Reddit API is wra
 1. The code first approach
 2. The schema first approach
 
-You can then upload to AWS. First compress to an archive
-
-```bash
-foo@bar$ zip -r files.zip ./app.py ./.venv/*
-```
-
-Then upload to AWS Lambda (cloud functions)
+You can then upload to AWS Lambda (cloud functions)
 
 https://eu-west-1.console.aws.amazon.com/lambda/
 
