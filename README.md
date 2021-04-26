@@ -9,3 +9,5 @@ And converts the response to a GraphQL defintion. The original Reddit API is wra
 1. The code first approach
 2. The schema first approach
 3. The serverless cloud functions approach
+
+Note: GraphQL seems kind of similar to jackson databind...

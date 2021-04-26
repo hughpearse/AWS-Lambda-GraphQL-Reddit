@@ -64,5 +64,6 @@ def handler(event, context):
           debug=app.debug
       )
       status_code = 200 if success else 400
-      return json.dumps(result)
+      #return json.dumps(result)
+      return result
 
