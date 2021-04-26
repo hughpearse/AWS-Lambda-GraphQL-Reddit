@@ -5,6 +5,9 @@ import os
 from ariadne import make_executable_schema, ObjectType, QueryType, gql, graphql_sync
 from ariadne.asgi import GraphQL
 from ariadne.constants import PLAYGROUND_HTML
+import boto3
+dynamodb = boto3.resource('dynamodb')
+table = dynamodb.Table('GraphQLReddit')
 
 myschema = gql("""
 type Query {
@@ -56,6 +59,7 @@ def graphql_server():
 
 def handler(event, context):
     with app.app_context():
+      response = table.put_item(Item={'graphqlquery': str(event)})
       success, result = graphql_sync(
           schema,
           event,

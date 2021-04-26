@@ -55,6 +55,12 @@ Actions -> Deploy API
 
 Take a note of the gateway endpoint. 
 
+Next create a table called "GraphQLReddit" on DynamoDB in the samee region
+
+https://console.aws.amazon.com/dynamodb
+
+It should have a Primary key name "graphqlquery" with a type String
+
 You can then test your new API on a hosted Grapql Playground tool like
 
 https://lucasconstantino.github.io/graphiql-online/
