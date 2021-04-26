@@ -40,7 +40,7 @@ with the settings:
 ```text
 name: myRedditGraphQLWrapper
 environment: python v3.7
-Handler: service.handler
+Runtime settings -> Handler: service.handler
 ```
 
 And create an associated REST gateway configuration
@@ -48,9 +48,13 @@ And create an associated REST gateway configuration
 https://console.aws.amazon.com/apigateway/
 
 ```text
+API name: myRedditGraphQLWrapper
+Endpoint Type: Edge optimized
 Actions -> Create Method -> POST
 Actions -> Enable CORS
 Actions -> Deploy API
+Deployment Stage: New Stage
+Stage name: Beta
 ```
 
 Take a note of the gateway endpoint. 
