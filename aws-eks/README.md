@@ -66,7 +66,7 @@ Create a cluster
 https://eu-west-1.console.aws.amazon.com/eks
 
 ```
-foo@bar:~$ eksctl create cluster --fargate --name hughs-cluster --region ${REGION}
+foo@bar:~$ eksctl create cluster --name hughs-cluster --region ${REGION}
 foo@bar:~$ kubectl config current-context
 ```
 
@@ -176,7 +176,26 @@ foo@bar:~$ helm install demo ./demo-0.1.0.tgz
 foo@bar:~$ kubectl get svc
 foo@bar:~$ kubectl get pods
 foo@bar:~$ kubectl get deployments
-foo@bar:~$ 
+```
+
+Next open a port, open the cluster 
+
+https://eu-west-1.console.aws.amazon.com/eks
+
+Navigate to "Configuration" -> "Networking" -> "Cluster security group"
+
+This should bring you to the security group in the VPC
+
+https://eu-west-1.console.aws.amazon.com/vpc
+
+Press "Actions" -> "Edit inbound rules" -> "Add rule" -> Type: HTTP, Source: Anywhere -> "Save Rules"
+
+Next open the url:
+
+```bash
+foo@bar:~$ kubectl get svc
+foo@bar:~$ export SERVICE_IP=$(kubectl get svc --namespace default reddit --template "{{ range (index .status.loadBalancer.ingress 0) }}{{.}}{{ end }}")
+foo@bar:~$ curl http://$SERVICE_IP:80
 ```
 
 
