@@ -185,4 +185,9 @@ foo@bar:~$ export SERVICE_IP=$(kubectl get svc --namespace default reddit --temp
 foo@bar:~$ curl http://$SERVICE_IP:80
 ```
 
+Cleanup
 
+```bash
+foo@bar:~$ eksctl delete cluster hughs-cluster
+foo@bar:~$ aws ecr delete-repository --repository-name reddit-graphql --force
+```
