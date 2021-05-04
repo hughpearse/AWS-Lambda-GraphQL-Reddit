@@ -61,19 +61,6 @@ The result should be visible on the Amazon ECR
 
 https://eu-west-1.console.aws.amazon.com/ecr/repositories?region=eu-west-1
 
-Create a cluster
-
-https://eu-west-1.console.aws.amazon.com/eks
-
-```
-foo@bar:~$ eksctl create cluster --name hughs-cluster --region ${REGION}
-foo@bar:~$ kubectl config current-context
-```
-
-And create a role
-
-https://docs.aws.amazon.com/eks/latest/userguide/service_IAM_role.html
-
 Create a Helm chart and package it up
 
 ```bash
@@ -82,7 +69,7 @@ foo@bar:~$ vim ./demo/values.yaml
 foo@bar:~$ helm package demo
 ```
 
-Start Kubernetes
+Start Kubernetes locally
 
 ```bash
 foo@bar:~$ minikube stop
@@ -127,7 +114,7 @@ Create an AWS EKS cluster
 https://eu-west-1.console.aws.amazon.com/eks
 
 ```
-foo@bar:~$ eksctl create cluster --fargate --name hughs-cluster --region ${REGION}
+foo@bar:~$ eksctl create cluster --name hughs-cluster --region ${REGION} # note "--fargate" profile requires annotation
 foo@bar:~$ kubectl config current-context
 foo@bar:~$ kubectl get svc
 foo@bar:~$ kubectl get pods
